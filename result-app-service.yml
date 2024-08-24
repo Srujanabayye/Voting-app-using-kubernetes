@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: result-app-service
+  labels:
+    app: result-app
+    author: srujana
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30009
+  selector:
+    app: result-app
+...
